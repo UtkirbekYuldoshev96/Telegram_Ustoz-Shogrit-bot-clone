@@ -9,7 +9,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
 from config import TOKEN
 from aiogram import F
-# from buttons import menu_buttons
+from buttons import menu_buttons
 
 dp = Dispatcher()
 
@@ -20,13 +20,12 @@ UzGeeks faollari tomonidan tuzilgan Ustoz-Shogird kanali va tomonidan clone vers
 Bu yerda Programmalash bo`yicha
 #Ustoz,  
 #Shogird,
-#O'quvKursi,
+#UquvKursi,
 #Sherik,  
-#Xodim va 
-#IshJoyi 
+#Xodim va #IshJoyi 
 topishingiz mumkin. 
 
-E'lon berish: 
+E'lon berish: @UserNmabot 
 Admin @Yuldoshev08
 """
 
@@ -37,7 +36,7 @@ async def command_start_handler(message: Message) -> None:
     text = f"Assalom alaykum {fullName}\n\nUstozShogird kanalining rasmiy botiga xush kelibsiz!\n\n/help yordam buyrugi orqali nimalarga qodir ekanligimni bilib oling!"
     await message.answer(
         text=text,
-        # reply_markup=menu_buttons,
+        reply_markup=menu_buttons,
         )
     pass
 
